@@ -1,0 +1,52 @@
+@import "tailwindcss";
+.rainbow-heading {
+  position: relative;
+  display: inline-block;
+  color: #0f172a; /* slate-900 */
+}
+
+.rainbow-heading::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background: linear-gradient(90deg, red, blue, yellow, green, red);
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  opacity: 0;
+  animation: rainbowSweep 6s ease-in-out infinite;
+}
+
+@keyframes rainbowSweep {
+  0% {
+    opacity: 0;
+    background-position: 0% 50%;
+  }
+  8% {
+    opacity: 0;
+    background-position: 0% 50%;
+  }
+  12% {
+    opacity: 1;
+    background-position: 0% 50%;
+  }
+  20% {
+    opacity: 1;
+    background-position: 100% 50%;
+  }
+  24% {
+    opacity: 0;
+    background-position: 100% 50%;
+  }
+  100% {
+    opacity: 0;
+    background-position: 100% 50%;
+  }
+}
