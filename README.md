@@ -51,6 +51,8 @@ Frontend runs at:
 
 `http://localhost:5173`
 
+Student Id is hardcoded on `scheduleBuilderStore.ts`, if you would like to see the schedule builder for another student please change the number there. `391` student id gives you a fresh start.
+
 ## Architecture
 
 ### Backend
@@ -122,7 +124,7 @@ Request body:
   "courseSectionId": 10
 }`
 
-### Student Schedule
+#### Student Schedule
 
 `GET /api/students/:id/schedule`
 
